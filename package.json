@@ -1,0 +1,20 @@
+{
+  "name": "TCP-HTTP-Server",
+  "version": "1.0.0",
+  "description": "HTTP Server written with TCP/IP server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FedericoLeiva12/TCP-HTTP-Server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FedericoLeiva12/TCP-HTTP-Server/issues"
+  },
+  "homepage": "https://github.com/FedericoLeiva12/TCP-HTTP-Server#readme"
+}
