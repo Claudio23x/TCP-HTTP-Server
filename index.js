@@ -1,21 +1,15 @@
-const net = require('net');
+const fs = require('fs').promises;
+const Server = require('./Server');
 
-const ip = '127.0.0.1';
-const port = 3000;
+let sv = new Server();
 
-const server = net.createServer();
+sv.get('/', sock => {
+    fs.readFile(__dirname + '/views/index.html')
+        .then(html => {
+            sock.send({response: html});
+        })
+});
 
-server.on('connection', sock => {
-    sock.on('data', data => {
-        let response = new Buffer(`HTTP/1.1 200 Ok
-Content-Type: text/html
-
-Hola, Mundo!`);
-        sock.write(response);
-        sock.end();
-    })
-})
-
-server.listen(port, ip, () => {
-    console.log(`Listening on ${ip}:${port}`);
+sv.listen(3000, '127.0.0.1', () => {
+    console.log('listen');
 });

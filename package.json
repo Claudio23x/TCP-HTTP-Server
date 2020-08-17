@@ -4,7 +4,7 @@
   "description": "HTTP Server written with TCP/IP server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/FedericoLeiva12/TCP-HTTP-Server/issues"
   },
-  "homepage": "https://github.com/FedericoLeiva12/TCP-HTTP-Server#readme"
+  "homepage": "https://github.com/FedericoLeiva12/TCP-HTTP-Server#readme",
+  "devDependencies": {
+    "mocha": "^8.1.1"
+  }
 }
