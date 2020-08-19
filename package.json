@@ -1,5 +1,5 @@
 {
-  "name": "TCP-HTTP-Server",
+  "name": "tcp-http-server",
   "version": "1.0.0",
   "description": "HTTP Server written with TCP/IP server",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/FedericoLeiva12/TCP-HTTP-Server.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Federico J. Leiva",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/FedericoLeiva12/TCP-HTTP-Server/issues"
