@@ -1,5 +1,5 @@
 const assert = require('assert');
-const parser = require('../utils/headersParser');
+const parser = require('../src/utils/headersParser');
 
 const sample = `GET / HTTP/1.1
 Host: localhost:3000
