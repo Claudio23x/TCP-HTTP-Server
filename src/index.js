@@ -6,8 +6,15 @@ class Server {
     constructor() {
         this.server = net.createServer();
         this.middlewares = [data => data];
-        this.gets = {};
-        this.posts = {};
+        this.gets = {'/error/404': sock => {
+            sock.status(404, 'Not found');
+            sock.send('404 Not found');
+        }};
+        this.posts = {'/error/404': sock => {
+            sock.setHeader('Content-Type', 'application/json');
+            sock.status(404, 'Not found');
+            sock.send('{"error": "404 Not found"}');
+        }};
 
         this.get = this.get.bind(this);
         this.post = this.post.bind(this);
